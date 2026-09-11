@@ -22,7 +22,18 @@
         .faq-item { background: #f8f9fa; border-radius: 12px; padding: 20px; margin-bottom: 15px; }
         .faq-item h3 { margin: 0 0 8px; color: #333; }
         .faq-item p { margin: 0; }
-    </style>
+    
+        /* Large displays: scale the root font size so this page grows with the
+           rest of the site. The prose column keeps its own reading measure, so
+           legal copy never runs the full width of a 2560px monitor. */
+        @media (min-width: 1500px) {
+            :root { font-size: 17.5px; }
+            .content { max-width: 78ch; }
+        }
+        @media (min-width: 2000px) {
+            :root { font-size: 19px; }
+        }
+</style>
 </head>
 <body>
     <div class="header">

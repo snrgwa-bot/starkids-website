@@ -25,7 +25,24 @@
         .footer a:hover { text-decoration: underline; }
         .footer .links { margin-bottom: 20px; }
         .footer .copy { opacity: 0.6; font-size: 0.9em; }
-    </style>
+    
+        /* Large displays: the shell was pinned at 900px, which on a 2560px
+           monitor reads as a narrow column adrift in empty space. Widen the
+           shell AND scale the root font size — the type here is all em-based,
+           so it grows with it; widening alone just stretches the gaps. The hero
+           paragraph keeps its own measure so line length stays readable. */
+        @media (min-width: 1500px) {
+            :root { font-size: 17.5px; }
+            .features { max-width: 1280px; }
+            .hero { padding: 110px 20px; }
+            .hero p { max-width: 720px; }
+        }
+        @media (min-width: 2000px) {
+            :root { font-size: 19px; }
+            .features { max-width: 1500px; }
+            .hero p { max-width: 780px; }
+        }
+</style>
 </head>
 <body>
     <div class="hero">
